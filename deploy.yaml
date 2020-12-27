@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hello-whale-container
-        image: paulslewis66/simplenodejs
+        image: localhost:5000/paulslewis66/simplenodejs
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
