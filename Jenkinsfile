@@ -22,7 +22,7 @@ pipeline {
           
             steps {
         withDockerRegistry([ credentialsId: "docker", url: "" ]) {
-          sh  'docker push paulslewis66/simplenodejs:latest'
+          sh  'docker push paulslewis66/simplenodejs'
           sh  'docker push paulslewis66/simplenodejs:$BUILD_NUMBER' 
         }
                   
