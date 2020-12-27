@@ -1,11 +1,10 @@
 {
-  "name": "app",
+  "name": "firstWebserver",
   "version": "0.0.1",
-  "main":"test.js",
+  "main":"firstWebserver.js",
   "author":"Test",
   "description": "For test ",
   "dependencies": {
     "express": "latest"
   }
-
 }
