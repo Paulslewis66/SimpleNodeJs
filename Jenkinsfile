@@ -18,15 +18,16 @@ pipeline {
             }
         }
     
- 
-      stage('Push image') {
+  stage('Publish image to Docker Hub') {
+          
             steps {
-            docker.withRegistry('https://registry.hub.docker.com', 'docker') {            
-              app.push("${env.BUILD_NUMBER}")            
-                app.push("latest")        
-              }    
-           }
-  }
+        withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) {
+          sh  'docker push nikhilnidhi/nginxtest:latest'
+          sh  'docker push nikhilnidhi/nginxtest:$BUILD_NUMBER' 
+        }
+                  
+          }
+        }
 
     stage('Deploy App') {
       steps {
