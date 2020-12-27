@@ -4,6 +4,9 @@
   "main":"firstWebserver.js",
   "author":"Test",
   "description": "For test ",
+  "scripts": {
+    "start": "node firstWebserver.js"
+  },
   "dependencies": {
     "express": "latest"
   }
