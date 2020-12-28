@@ -13,7 +13,7 @@ pipeline {
       stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("paulslewis66/simplenodejs:${env.BUILD_ID}")
+                    myapp = docker.build("paulslewis66/simplenodejs")
                 }
             }
         }
