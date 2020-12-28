@@ -1,5 +1,5 @@
 # use a node base image
-FROM node:7-onbuild
+FROM node:current-buster-slim
 
 # set maintainer
 LABEL maintainer "academy@release.works"
