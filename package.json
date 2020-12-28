@@ -1,11 +1,11 @@
 {
   "name": "firstWebserver",
   "version": "0.0.1",
-  "main":"firstWebserver.js",
+  "main":"server.js",
   "author":"Test",
   "description": "For test ",
   "scripts": {
-    "start": "node firstWebserver.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "latest"
