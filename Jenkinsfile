@@ -42,7 +42,7 @@ stage('Deploy sql') {
         }
       }
     }
-stage('Deploy sql=pv') {
+stage('Deploy sql-pv') {
       steps {
         script {
           kubernetesDeploy(configs: "deploy-sql-pv.yaml", kubeconfigId: "mykubeconfig")
