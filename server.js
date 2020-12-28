@@ -1,8 +1,10 @@
-var http = require('http');
+const express = require('express')
+const os = require('os')
 
-http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.send('Hello World from a Node.js webserver\n');
-}).listen(8000, '127.0.0.1');
+const app = express()
+app.get('/', (req, res) => {
+        res.send(`Hi from ${os.hostname()}!`)
+})
 
-console.log('The server is up and running at http://127.0.0.1:8000/');
+const port = 3000
+app.listen(port, () => console.log(`listening on port ${port}`))
