@@ -5,7 +5,8 @@ FROM node:current-buster-slim
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-RUN npm install
+RUN npm install 
+RUN npm install express
 COPY . /usr/src/app
 
 # set maintainer
