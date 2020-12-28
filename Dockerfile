@@ -15,4 +15,5 @@ HEALTHCHECK --interval=5s \
 
 # tell docker what port to expose
 CMD [ "node", "server.js" ]
+
 EXPOSE 8000
