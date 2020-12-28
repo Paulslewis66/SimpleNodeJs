@@ -23,8 +23,7 @@ pipeline {
             steps {
         withDockerRegistry([ credentialsId: "docker", url: "" ]) {
           sh  'docker push paulslewis66/simplenodejs'
-        }
-                  
+            }     
           }
         }
 
@@ -35,6 +34,25 @@ pipeline {
         }
       }
     }
+
+stage('Deploy sql') {
+      steps {
+        script {
+          kubernetesDeploy(configs: "deploy-sql.yaml", kubeconfigId: "mykubeconfig")
+        }
+      }
+    }
+stage('Deploy sql=pv') {
+      steps {
+        script {
+          kubernetesDeploy(configs: "deploy-sql-pv.yaml", kubeconfigId: "mykubeconfig")
+        }
+      }
+    }
+
+
+
+
 
   }
 
