@@ -3,7 +3,7 @@ FROM node:current-buster-slim
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install -g
 
 # set maintainer
 LABEL maintainer "academy@release.works"
