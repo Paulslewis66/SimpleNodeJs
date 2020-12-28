@@ -6,5 +6,5 @@ app.get('/', (req, res) => {
         res.send(`Hi from ${os.hostname()}!`)
 })
 
-const port = 3000
+const port = 8000
 app.listen(port, () => console.log(`listening on port ${port}`))
